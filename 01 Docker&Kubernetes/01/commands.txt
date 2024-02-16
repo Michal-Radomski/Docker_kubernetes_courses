@@ -1,0 +1,16 @@
+https://computingforgeeks.com/install-docker-desktop-on-ubuntu/
+
+sudo systemctl status containerd
+sudo systemctl status docker
+sudo systemctl status docker.socket
+
+docker run hello-world
+
+docker info
+docker compose version
+docker version
+docker --version
+
+docker context ls
+docker context use default
+docker context use desktop-linux
