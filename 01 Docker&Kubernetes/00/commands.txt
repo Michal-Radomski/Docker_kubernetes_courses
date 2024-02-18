@@ -1,4 +1,6 @@
-https://computingforgeeks.com/install-docker-desktop-on-ubuntu/
+https://computingforgeeks.com/install-docker-desktop-on-ubuntu
+
+Info vm.overcommit_memory = 1: https://medium.com/@akhshyganesh/redis-enabling-memory-overcommit-is-a-crucial-configuration-68dbb77dae5f
 
 ``Kubernetes
 kubectl version
@@ -37,3 +39,7 @@ docker kill <container ID>
 docker system prunu - removes stopped containers
 
 docker exec -it <container id> <command> (sh/bash) -> -it = -i -t
+
+docker build .
+docker run <container ID>  eg: docker run 2e8d6b04b8d7
+docker build < -t dockerHubID/repoName:latest > .
