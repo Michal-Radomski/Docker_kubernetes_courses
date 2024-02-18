@@ -21,7 +21,19 @@ docker context use desktop-linux
 
 docker search ubuntu
 docker images
-docker ps -a
+docker ps -a (--all)
 
 docker login
 docker logout
+
+docker run busybox ls -l
+docker run busybox echo Hi there!
+
+docker start <container ID>
+docker logs <container ID>
+docker stop <container ID>
+docker kill <container ID>
+
+docker system prunu - removes stopped containers
+
+docker exec -it <container id> <command> (sh/bash) -> -it = -i -t
