@@ -37,7 +37,7 @@ app.get("/favicon.ico", (_req: Request, res: Response) => {
 //* Test route
 app.get("/", (req: Request, res: Response) => {
   console.log("req.ip:", req.ip);
-  res.send("<p style='color:gray;'>API is running</p>");
+  res.send("<p style='color:gray; text-decoration:underline;'>API is running</p>");
 });
 
 //* Port
