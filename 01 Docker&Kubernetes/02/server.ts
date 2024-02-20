@@ -1,19 +1,18 @@
 import http from "http";
 import path from "path";
-import * as dotenv from "dotenv";
-dotenv.config();
 import express, { Express, Request, Response } from "express";
 import cors from "cors";
 import morgan from "morgan";
 import helmet from "helmet";
-import { createClient } from "redis";
+import redis from "redis";
 
 //* The server
 const app: Express = express();
 
 //* Redis
-const client = createClient();
-client.set("visits", 0);
+const client = redis.createClient({ host: "redis-server", port: 6379 });
+// console.log("client", client);
+client.set("visits", String(0));
 
 const corsOptions = {
   origin: true,
@@ -44,11 +43,13 @@ app.get("/", async (req: Request, res: Response) => {
   console.log("req.ip:", req.ip);
   // res.send("<p style='color:gray; text-decoration:underline;'>API is running</p>");
 
-  await client.on("error", (err) => console.log("Redis Client Error", err)).connect();
-  const visits = await client.get("visits");
-  await res.send("Number of visits is:" + visits);
-  await client.set("visits", Number(visits) + 1);
-  await client.disconnect();
+  client.get("visits", (err, visits) => {
+    if (err) {
+      console.log({ err });
+    }
+    res.send("Number of visits: " + visits);
+    client.set("visits", String(Number(visits) + 1));
+  });
 });
 
 //* Port
