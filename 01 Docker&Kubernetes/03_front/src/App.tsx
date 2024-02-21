@@ -10,10 +10,10 @@ function App(): JSX.Element {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.tsx</code> and save to reload.
+            To get started {"=>"} try to edit <code>src/App.tsx</code> and save to reload.
           </p>
           <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-            Learn React
+            Learn Docker with React and Redux and TS
           </a>
         </header>
       </div>
