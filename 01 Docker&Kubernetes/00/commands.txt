@@ -47,10 +47,12 @@ docker build < -t dockerHubID/repoName:latest > .
 
 docker run -p 5000:5000 <image ID>
 docker run -p 3000:3000 -v /app/node_modules -v "$(pwd):/app" <image ID>
-docker exec -it <Container ID> sh
+docker exec -it <container ID> sh
 
 docker-compose --version
 docker-compose up
 docker-compose up --build
 docker-compose down
 docker-compose ps
+
+docker run <container Id> npm run test
