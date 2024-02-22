@@ -10,6 +10,8 @@ function App(): JSX.Element {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
+            To test, change the file...
+            <br />
             To get started {"=>"} try to edit <code>src/App.tsx</code> and save to reload.
           </p>
           <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">

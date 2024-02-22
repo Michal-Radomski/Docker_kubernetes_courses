@@ -46,7 +46,7 @@ docker run <container ID>  eg: docker run 2e8d6b04b8d7
 docker build < -t dockerHubID/repoName:latest > .
 
 docker run -p 5000:5000 <image ID>
-docker run -p 3000:3000 -v /app/node_modules -e "$(pwd):/app" <image ID>
+docker run -p 3000:3000 -v /app/node_modules -v "$(pwd):/app" <image ID>
 docker exec -it <Container ID> sh
 
 docker-compose --version
