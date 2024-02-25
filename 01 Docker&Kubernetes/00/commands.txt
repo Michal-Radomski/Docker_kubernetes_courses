@@ -36,7 +36,7 @@ docker logs <container ID>
 docker stop <container ID>
 docker kill <container ID>
 
-docker system prunu - removes stopped containers
+docker system prune - remove all unused containers, networks, images (both dangling and unused), and optionally, volumes.
 
 docker exec -it <container id> <command> (sh/bash) -> -it = -i -t
 
@@ -56,3 +56,6 @@ docker-compose down
 docker-compose ps
 
 docker run <container Id> npm run test
+
+docker container prune - removes all containers
+docker volume ls
