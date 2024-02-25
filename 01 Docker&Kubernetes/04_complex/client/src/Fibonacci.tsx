@@ -1,6 +1,10 @@
 import React from "react";
 import axios from "axios";
 
+interface CustomError extends Error {
+  code: string;
+}
+
 class Fibonacci extends React.Component<{}, {}> {
   state = {
     seenIndexes: [],
@@ -14,24 +18,35 @@ class Fibonacci extends React.Component<{}, {}> {
   }
 
   async fetchValues() {
-    const values = await axios.get("/api/values/current");
-    this.setState({ values: values.data });
+    try {
+      const values = await axios.get("/api/values/current");
+      this.setState({ values: values.data });
+    } catch (error) {
+      console.log("error.code:", (error as CustomError).code);
+    }
   }
 
   async fetchIndexes() {
-    const seenIndexes = await axios.get("/api/values/all");
-    this.setState({
-      seenIndexes: seenIndexes.data,
-    });
+    try {
+      const seenIndexes = await axios.get("/api/values/all");
+      this.setState({
+        seenIndexes: seenIndexes.data,
+      });
+    } catch (error) {
+      console.log("error.code:", (error as CustomError).code);
+    }
   }
 
   handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
-    await axios.post("/api/values", {
-      index: this.state.index,
-    });
-    this.setState({ index: "" });
+    try {
+      await axios.post("/api/values", {
+        index: this.state.index,
+      });
+      this.setState({ index: "" });
+    } catch (error) {
+      console.log("error:", error);
+    }
   };
 
   renderSeenIndexes() {
@@ -48,7 +63,6 @@ class Fibonacci extends React.Component<{}, {}> {
         </div>
       );
     }
-
     return entries;
   }
 
