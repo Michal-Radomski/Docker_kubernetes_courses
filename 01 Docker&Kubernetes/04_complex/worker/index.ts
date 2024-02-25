@@ -8,7 +8,7 @@ const redisClient = redis.createClient({
   retry_strategy: () => 1000,
 });
 const sub = redisClient.duplicate();
-console.log("sub:", sub);
+// console.log("sub:", sub);
 
 function fibonacci(index: number): number {
   if (index < 2) return 1;
