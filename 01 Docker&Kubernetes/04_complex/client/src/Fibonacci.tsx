@@ -45,7 +45,7 @@ class Fibonacci extends React.Component<{}, {}> {
       });
       this.setState({ index: "" });
     } catch (error) {
-      console.log("error:", error);
+      console.log("error.code:", (error as CustomError).code);
     }
   };
 
