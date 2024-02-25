@@ -10,13 +10,13 @@ const redisClient = redis.createClient({
 const sub = redisClient.duplicate();
 console.log("sub:", sub);
 
-function fib(index: number): number {
+function fibonacci(index: number): number {
   if (index < 2) return 1;
-  return fib(index - 1) + fib(index - 2);
+  return fibonacci(index - 1) + fibonacci(index - 2);
 }
 
 sub.on("message", (_channel, message) => {
   console.log("_channel:", _channel);
-  redisClient.hset("values", message, String(fib(parseInt(message))));
+  redisClient.hset("values", message, String(fibonacci(parseInt(message))));
 });
 sub.subscribe("insert");
