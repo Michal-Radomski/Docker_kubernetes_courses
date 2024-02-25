@@ -75,10 +75,10 @@ app.get("/favicon.ico", (_req: Request, res: Response) => {
   res.sendFile(path.join(__dirname + "/favicon.svg"));
 });
 //* Test route
-app.get("/", (req: Request, res: Response) => {
-  console.log("req.ip:", req.ip);
-  res.send("<h1 style='color:blue;text-align:center'>API is running</h1>");
-});
+// app.get("/", (req: Request, res: Response) => {
+//   console.log("req.ip:", req.ip);
+//   res.send("<h1 style='color:darkblue;text-align:center'>API is running</h1>");
+// });
 
 //* Routes
 app.get("/values/all", async (req, res) => {
