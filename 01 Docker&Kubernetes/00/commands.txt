@@ -19,6 +19,10 @@ kubectl version
 kubectl cluster-info
 kubectl get nodes
 
+kubectl apply -f <file.yaml>
+kubectl get <pods / services>
+minikube ip
+
 ``Docker
 sudo systemctl status containerd
 sudo systemctl status docker
