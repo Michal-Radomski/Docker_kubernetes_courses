@@ -23,10 +23,11 @@ kubectl apply -f <file.yaml>
 kubectl get <pods / services>
 minikube ip
 
+kubectl describe <type eg pod> <name>
+
 ``Docker
 sudo systemctl status containerd
 sudo systemctl status docker
-sudo systemctl status docker.socket
 
 docker run hello-world
 
