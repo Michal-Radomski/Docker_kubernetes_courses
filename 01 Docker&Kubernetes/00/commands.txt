@@ -2,30 +2,6 @@ https://computingforgeeks.com/install-docker-desktop-on-ubuntu
 
 Info vm.overcommit_memory = 1: https://medium.com/@akhshyganesh/redis-enabling-memory-overcommit-is-a-crucial-configuration-68dbb77dae5f
 
-``Kubernetes
-minikube version
-minikube status
-minikube start
-minikube stop
-minikube delete
-minikube start — driver=docker
-minikube addons list
-minikube dashboard
-minikube profile list
-
-kubectl version --client
-kubectl version -o yaml
-kubectl version
-kubectl cluster-info
-kubectl get nodes
-
-kubectl apply -f <file.yaml>
-kubectl delete -f <file.yaml>
-kubectl get <pods / services / deployments>
-kubectl get pods -o wide
-minikube ip
-
-kubectl describe <type eg pod> <name>
 
 ``Docker
 sudo systemctl status containerd
@@ -57,6 +33,8 @@ docker logs <container ID>
 docker stop <container ID>
 docker kill <container ID>
 
+docker push <dockerHubID/repoName> (push to DockerHub)
+
 docker system prune - remove all unused containers, networks, images (both dangling and unused), and optionally, volumes.
 
 docker exec -it <container id> <command> (sh/bash) -> -it = -i -t
@@ -81,3 +59,31 @@ docker run <container Id> npm run test
 
 docker container prune - removes all containers
 docker volume ls
+
+
+``Kubernetes
+minikube version
+minikube status
+minikube start
+minikube stop
+minikube delete
+minikube start — driver=docker
+minikube addons list
+minikube dashboard
+minikube profile list
+
+kubectl version --client
+kubectl version -o yaml
+kubectl version
+kubectl cluster-info
+kubectl get nodes
+
+kubectl apply -f <file.yaml>
+kubectl delete -f <file.yaml>
+kubectl get <pods / services / deployments>
+kubectl get pods -o wide
+minikube ip
+
+kubectl describe <type eg pod> <name>
+
+kubectl set image <object type>/<object name> <container name=new full container name> 
