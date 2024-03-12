@@ -20,7 +20,9 @@ kubectl cluster-info
 kubectl get nodes
 
 kubectl apply -f <file.yaml>
-kubectl get <pods / services>
+kubectl delete -f <file.yaml>
+kubectl get <pods / services / deployments>
+kubectl get pods -o wide
 minikube ip
 
 kubectl describe <type eg pod> <name>
