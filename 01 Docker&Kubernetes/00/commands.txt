@@ -35,7 +35,7 @@ docker kill <container ID>
 
 docker push <dockerHubID/repoName> (push to DockerHub)
 
-docker system prune - remove all unused containers, networks, images (both dangling and unused), and optionally, volumes.
+docker system prune -a -> remove all unused containers, networks, images (both dangling and unused), and optionally, volumes.
 
 docker exec -it <container id> <command> (sh/bash) -> -it = -i -t
 
@@ -57,7 +57,7 @@ docker-compose ps
 
 docker run <container Id> npm run test
 
-docker container prune -a -> removes all containers
+docker container prune -> removes all containers
 docker volume ls
 
 
