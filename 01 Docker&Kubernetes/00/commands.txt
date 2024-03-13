@@ -57,7 +57,7 @@ docker-compose ps
 
 docker run <container Id> npm run test
 
-docker container prune - removes all containers
+docker container prune -a -> removes all containers
 docker volume ls
 
 
@@ -87,3 +87,7 @@ minikube ip
 kubectl describe <type eg pod> <name>
 
 kubectl set image <object type>/<object name> <container name=new full container name> 
+
+minikube docker-env
+
+kubectl logs <name>
