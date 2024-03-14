@@ -92,3 +92,6 @@ kubectl set image <object type>/<object name> <container name=new full container
 minikube docker-env
 
 kubectl logs <name>
+
+kubectl get storageclass
+kubectl describe storageclass
