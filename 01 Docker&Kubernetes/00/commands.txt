@@ -82,6 +82,7 @@ kubectl apply -f <file.yaml>
 kubectl delete -f <file.yaml>
 kubectl get <pods / services / deployments>
 kubectl get pods -o wide
+kubectl delete <deployment / service> <name>
 minikube ip
 
 kubectl describe <type eg pod> <name>
