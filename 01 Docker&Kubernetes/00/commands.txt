@@ -95,3 +95,6 @@ kubectl logs <name>
 
 kubectl get storageclass
 kubectl describe storageclass
+
+kubectl create secret generic pgpassword --from-literal POSTGRES_PASSWORD=qawsed123
+kubectl get secrets
