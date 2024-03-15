@@ -101,3 +101,6 @@ kubectl get secrets
 
 minikube addons enable ingress
 minikube addons disable ingress
+
+
+skaffold version
