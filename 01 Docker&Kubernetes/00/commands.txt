@@ -4,17 +4,18 @@ Info vm.overcommit_memory = 1: https://medium.com/@akhshyganesh/redis-enabling-m
 
 
 ``Docker
-sudo systemctl status containerd
-sudo systemctl status docker
+`sudo systemctl status containerd
+`sudo systemctl status docker
 
 docker run hello-world
 
-docker info
-docker compose version
-docker version
-docker --version
+`docker info
+`docker compose version
+`docker-compose version
+`docker version
+`docker --version
 
-docker context ls
+`docker context ls
 docker context use default
 docker context use desktop-linux
 
