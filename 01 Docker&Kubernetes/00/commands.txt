@@ -2,6 +2,8 @@ https://computingforgeeks.com/install-docker-desktop-on-ubuntu
 
 Info vm.overcommit_memory = 1: https://medium.com/@akhshyganesh/redis-enabling-memory-overcommit-is-a-crucial-configuration-68dbb77dae5f
 
+~https://docs.docker.com/reference/cli/docker
+~https://github.com/pnowy/docker-course/blob/main/komendy.txt
 
 ``Docker
 `sudo systemctl status containerd
@@ -19,20 +21,27 @@ docker run hello-world
 docker context use default
 docker context use desktop-linux
 
-docker search ubuntu
-docker images
-docker ps -a (--all)
-
 docker login
 docker logout
 
+docker search ubuntu
+`docker images
+`docker image -a
+`docker ps -a (--all)
+`docker container ls -a
+`docker volume ls
+
+`docker container run --publish 8080:80 nginx / docker run --publish 8080:80 nginx -> new/old command (8080 localhost, 80 nginx)
 docker run busybox ls -l
 docker run busybox echo Hi there!
 
-docker start <container ID>
+`docker start <container ID>
 docker logs <container ID>
-docker stop <container ID>
+`docker stop <container ID> / docker container stop <container ID> 
 docker kill <container ID>
+docker container rm <container ID> (-f)
+docker container logs <container ID>
+
 
 docker push <dockerHubID/repoName> (push to DockerHub)
 
