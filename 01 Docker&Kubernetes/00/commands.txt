@@ -69,8 +69,14 @@ docker exec -it <container ID> sh (-i -> interactive -t -> terminal)
 docker container top <container ID>
 docker container inspect <container ID>
 `docker container stats
+
 `docker network ls
 docker network inspect bridge
+docker network create --driver=bridge skynet
+docker container run -d --network skynet nginx
+docker network connect <network name> <container ID>
+docker network disconnect <network name> <container ID>
+docker network rm <network name>
 
 docker-compose --version
 docker-compose up
