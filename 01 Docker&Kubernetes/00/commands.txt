@@ -45,6 +45,7 @@ docker kill <container ID>
 docker container rm <container ID> (-f)
 `docker rm -f <container ID>
 docker container logs <container ID>
+`docker container start -ai <container ID>
 
 
 docker push <dockerHubID/repoName> (push to DockerHub)
@@ -62,11 +63,14 @@ docker build < -t dockerHubID/repoName:latest > .
 `docker run -p 5000:5000 <image ID> !is used to create and start new containers based on Docker images!
 `docker run -p 3000:3000 -v /app/node_modules -v "$(pwd):/app" <image ID>
 e.g. docker run -d -p 3000:3000 -v /app/node_modules -v "$(pwd):/app" --name dockerized-react-app react-docker-app-1
-docker exec -it <container ID> sh
+docker exec -it <container ID> sh (-i -> interactive -t -> terminal)
+`docker container exec -it <container ID> <command>
 
 docker container top <container ID>
 docker container inspect <container ID>
 `docker container stats
+`docker network ls
+docker network inspect bridge
 
 docker-compose --version
 docker-compose up
