@@ -33,11 +33,12 @@ docker search ubuntu
 `docker container ls -a
 `docker volume ls
 
+
 `docker container run --publish 8080:80 nginx / docker run --publish 8080:80 nginx -> new/old command (8080 localhost, 80 nginx)
 docker run busybox ls -l
 docker run busybox echo Hi there!
 
-`docker start <container ID>
+`docker start <container ID> !is used to start existing stopped containers that were previously created with docker run or a similar command!
 docker logs <container ID>
 `docker stop <container ID> / docker container stop <container ID> 
 docker kill <container ID>
@@ -49,18 +50,23 @@ docker container logs <container ID>
 docker push <dockerHubID/repoName> (push to DockerHub)
 
 `docker system prune -a -> remove all unused containers, networks, images (both dangling and unused), and optionally, volumes.
+`docker volume prune
 
 docker exec -it <container id> <command> (sh/bash) -> -it = -i -t
 
 `docker build .
 `docker build -f Dockerfile.dev .
-`docker run <container ID>  eg: docker run 2e8d6b04b8d7
+`docker run  (-d) <container ID>  eg: docker run (-d) 2e8d6b04b8d7 -> -d - detach (in the background)
 docker build < -t dockerHubID/repoName:latest > .
 
-docker run -p 5000:5000 <image ID>
+`docker run -p 5000:5000 <image ID> !is used to create and start new containers based on Docker images!
 `docker run -p 3000:3000 -v /app/node_modules -v "$(pwd):/app" <image ID>
 e.g. docker run -d -p 3000:3000 -v /app/node_modules -v "$(pwd):/app" --name dockerized-react-app react-docker-app-1
 docker exec -it <container ID> sh
+
+docker container top <container ID>
+docker container inspect <container ID>
+`docker container stats
 
 docker-compose --version
 docker-compose up
