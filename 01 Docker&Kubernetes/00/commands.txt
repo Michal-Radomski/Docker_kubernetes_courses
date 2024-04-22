@@ -20,11 +20,13 @@ docker run hello-world
 `docker context ls
 docker context use default
 docker context use desktop-linux
+docker context inspect default / desktop-linux
 
 docker login
 docker logout
 
 docker search ubuntu
+`docker system df
 `docker images
 `docker image -a
 `docker ps -a (--all)
@@ -40,22 +42,24 @@ docker logs <container ID>
 `docker stop <container ID> / docker container stop <container ID> 
 docker kill <container ID>
 docker container rm <container ID> (-f)
+`docker rm -f <container ID>
 docker container logs <container ID>
 
 
 docker push <dockerHubID/repoName> (push to DockerHub)
 
-docker system prune -a -> remove all unused containers, networks, images (both dangling and unused), and optionally, volumes.
+`docker system prune -a -> remove all unused containers, networks, images (both dangling and unused), and optionally, volumes.
 
 docker exec -it <container id> <command> (sh/bash) -> -it = -i -t
 
-docker build .
-docker build -f Dockerfile.dev .
-docker run <container ID>  eg: docker run 2e8d6b04b8d7
+`docker build .
+`docker build -f Dockerfile.dev .
+`docker run <container ID>  eg: docker run 2e8d6b04b8d7
 docker build < -t dockerHubID/repoName:latest > .
 
 docker run -p 5000:5000 <image ID>
-docker run -p 3000:3000 -v /app/node_modules -v "$(pwd):/app" <image ID>
+`docker run -p 3000:3000 -v /app/node_modules -v "$(pwd):/app" <image ID>
+e.g. docker run -d -p 3000:3000 -v /app/node_modules -v "$(pwd):/app" --name dockerized-react-app react-docker-app-1
 docker exec -it <container ID> sh
 
 docker-compose --version
@@ -68,7 +72,6 @@ docker-compose ps
 docker run <container Id> npm run test
 
 docker container prune -> removes all containers
-docker volume ls
 
 
 ``Kubernetes
