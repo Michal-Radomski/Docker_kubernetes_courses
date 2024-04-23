@@ -52,6 +52,7 @@ docker push <dockerHubID/repoName> (push to DockerHub)
 
 `docker system prune -a -> remove all unused containers, networks, images (both dangling and unused), and optionally, volumes.
 `docker volume prune
+`docker system prune --volumes -a
 
 docker exec -it <container id> <command> (sh/bash) -> -it = -i -t
 
@@ -77,6 +78,12 @@ docker container run -d --network skynet nginx
 docker network connect <network name> <container ID>
 docker network disconnect <network name> <container ID>
 docker network rm <network name>
+
+`docker image pull nginx
+docker image pull ubuntu
+docker image history ubuntu:latest
+docker image inspect ubuntu
+docker image rm ubuntu
 
 docker-compose --version
 docker-compose up
