@@ -85,6 +85,9 @@ docker image history ubuntu:latest
 docker image inspect ubuntu
 docker image rm ubuntu
 
+docker buildx inspect --bootstrap
+docker buildx version
+
 docker-compose --version
 docker-compose up
 docker-compose up --build
