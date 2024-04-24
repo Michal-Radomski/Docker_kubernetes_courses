@@ -99,6 +99,11 @@ docker exec ubuntu-root ps aux
 docker run -d --name ubuntu-no-root --user=1000 ubuntu:20.04 sleep 100
 docker exec ubuntu-no-root ps aux
 
+docker scout version
+
+trivy image ubuntu:23.04 -> external tool
+trivy image ubuntu:23.04 --severity=HIGH,CRITICAL -> external tool
+
 
 docker-compose --version
 docker-compose up
