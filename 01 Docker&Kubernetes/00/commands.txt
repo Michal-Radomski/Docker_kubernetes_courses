@@ -88,6 +88,18 @@ docker image rm ubuntu
 docker buildx inspect --bootstrap
 docker buildx version
 
+VOLUMES
+docker container run -d -p 3000:3000 --mount 'src=8ca2ef8645bd40700db261f29176d3b1502bd1b40ee7127d62987c0398b7819c,dst=/appdata' nodesave
+docker container run -d -p 3000:3000 -v 8ca2ef8645bd40700db261f29176d3b1502bd1b40ee7127d62987c0398b7819c:/appdata nodesave
+docker container run -d -p 3000:3000 --mount 'src=nodesave-data,dst=/appdata' nodesave
+
+DOCKER SECURITY
+docker run -d --name ubuntu-root ubuntu:20.04 sleep 100
+docker exec ubuntu-root ps aux
+docker run -d --name ubuntu-no-root --user=1000 ubuntu:20.04 sleep 100
+docker exec ubuntu-no-root ps aux
+
+
 docker-compose --version
 docker-compose up
 docker-compose up --build
