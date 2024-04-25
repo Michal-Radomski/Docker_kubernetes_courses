@@ -107,10 +107,14 @@ trivy image ubuntu:23.04 --severity=HIGH,CRITICAL -> external tool
 DOCKER COMPOSE
 `docker-compose --version
 `docker-compose up
+docker-compose up -d
+docker-compose up --wait
 docker-compose up --build
 docker-compose up --build --remove-orphans
 `docker-compose down
+docker compose down -> V2
 `docker-compose ps
+docker-compose stop
 
 docker run <container Id> npm run test
 
