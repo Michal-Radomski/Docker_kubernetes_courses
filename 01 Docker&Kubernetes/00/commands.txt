@@ -120,6 +120,8 @@ docker run <container Id> npm run test
 
 docker container prune -> removes all containers
 
+`docker init
+
 
 ``Kubernetes
 minikube version
