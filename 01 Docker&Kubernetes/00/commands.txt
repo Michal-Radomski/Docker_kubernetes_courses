@@ -124,7 +124,7 @@ docker container prune -> removes all containers
 
 
 ``Kubernetes
-minikube version
+`minikube version
 minikube status
 minikube start
 minikube stop
@@ -136,7 +136,7 @@ minikube profile list
 
 kubectl version --client
 kubectl version -o yaml
-kubectl version
+`kubectl version
 kubectl cluster-info
 kubectl get nodes
 
