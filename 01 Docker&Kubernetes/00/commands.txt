@@ -146,9 +146,12 @@ kubectl port-forward <my-first-nginx> 8080:80
 kubectl delete pod <my-first-nginx>
 kubectl describe pod <my-first-nginx>
 
+kubectl get configmap
+
 kubectl apply -f <file.yaml>
 kubectl delete -f <file.yaml>
-kubectl get <pods / services / deployments>
+`kubectl get <pods / services / deployments>
+`kubectl get pods --show-labels
 kubectl get pods -o wide
 kubectl delete <deployment / service> <name>
 minikube ip
