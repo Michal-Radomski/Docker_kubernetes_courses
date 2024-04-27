@@ -141,9 +141,10 @@ kubectl version -o yaml
 kubectl cluster-info
 kubectl get nodes
 
-kubectl run my-first-nginx --image=nginx
-kubectl port-forward my-first-nginx 8080:80
-kubectl delete pod my-first-nginx
+kubectl run <my-first-nginx> --image=nginx
+kubectl port-forward <my-first-nginx> 8080:80
+kubectl delete pod <my-first-nginx>
+kubectl describe pod <my-first-nginx>
 
 kubectl apply -f <file.yaml>
 kubectl delete -f <file.yaml>
