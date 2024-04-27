@@ -3,9 +3,9 @@ kind: Pod
 metadata:
   name: my-first-nginx
 spec:
+  restartPolicy: OnFailure
   containers:
     - image: nginx:1.24.0
       name: nginx # port: 80
     - name: tomcat
       image: tomcat:9.0-jdk17-temurin # port: 8080
-
