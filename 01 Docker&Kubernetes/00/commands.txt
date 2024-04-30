@@ -167,6 +167,11 @@ kubectl get namespace / kubectl get ns
 kubectl create namespace <name>
 
 `kubectl config view
+kubectl api-resources
+
+kubectl get secret
+kubectl describe secret
+echo <base64-string> | base64 -d
 
 kubectl describe <type eg pod> <name>
 
