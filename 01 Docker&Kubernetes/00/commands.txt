@@ -132,7 +132,7 @@ minikube stop
 minikube delete
 minikube start — driver=docker
 minikube addons list
-minikube dashboard
+`minikube dashboard
 minikube profile list
 
 kubectl version --client
@@ -140,6 +140,7 @@ kubectl version -o yaml
 `kubectl version
 kubectl cluster-info
 kubectl get nodes
+`kubectl get svc
 
 kubectl run <my-first-nginx> --image=nginx
 kubectl port-forward <my-first-nginx> 8080:80
@@ -155,6 +156,13 @@ kubectl delete -f <file.yaml>
 kubectl get pods -o wide
 kubectl delete <deployment / service> <name>
 minikube ip
+
+`kubectl get pods -n kube-system
+`kubectl proxy
+
+kubectl -- logs
+kubectl -- exec
+kubectl -- explain
 
 kubectl describe <type eg pod> <name>
 
