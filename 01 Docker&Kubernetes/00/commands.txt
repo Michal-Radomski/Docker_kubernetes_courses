@@ -2,6 +2,9 @@ https://computingforgeeks.com/install-docker-desktop-on-ubuntu
 
 Info vm.overcommit_memory = 1: https://medium.com/@akhshyganesh/redis-enabling-memory-overcommit-is-a-crucial-configuration-68dbb77dae5f
 
+`A gibibyte is equal to 230 or 1,073,741,824 bytes. A gigabyte is equal to 109 or 1,000,000,000 bytes. One gibibyte equals 1.074 gigabytes.
+`That's a 7% difference.
+
 ~https://docs.docker.com/reference/cli/docker
 ~https://github.com/pnowy/docker-course/blob/main/komendy.txt
 
