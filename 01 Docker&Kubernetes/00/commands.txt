@@ -172,10 +172,6 @@ kubectl create namespace <name>
 `kubectl config view
 kubectl api-resources
 
-kubectl get secret
-kubectl describe secret
-echo <base64-string> | base64 -d
-
 kubectl describe <type eg pod> <name>
 `e.g. kubectl describe node minikube
 
@@ -190,6 +186,20 @@ kubectl describe storageclass
 
 kubectl create secret generic pgpassword --from-literal POSTGRES_PASSWORD=qawsed123
 kubectl get secrets
+kubectl get secret
+kubectl describe secret
+echo <base64-string> | base64 -d
+
+https://github.com/pnowy/kubernetes-course/blob/main/komendy.md
+minikube image build -t app:1.1.0 .                                 # budowa obrazu w wersji 1.1.0 dla kontekstu minikube
+kubectl rollout status deployment/app-deployment                    # status wdrożenia deploymentu
+kubectl rollout history deployment/app-deployment                   # historia rewizji deploymentu
+kubectl rollout undo deployment/app-deployment                      # powrót do poprzedniej rewizji
+kubectl rollout undo deployment/app-deployment --to-revision 1      # powrót do konkretnej rewizji
+kubectl scale deployment deployment/app-deployment --replicas 10    # skalowanie deploymentu
+kubectl rollout pause deployment/app-deployment                     # wstrzymanie wdrożeń danego deploymentu
+kubectl rollout resume deployment/app-deployment                    # wznowienie wdrożeń danego deploymentu
+
 
 minikube addons enable ingress
 minikube addons disable ingress
