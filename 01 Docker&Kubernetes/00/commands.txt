@@ -206,5 +206,7 @@ kubectl get pvc                                                     # pobierz pe
 minikube addons enable ingress
 minikube addons disable ingress
 
+mkcert --key-file key.pem --cert-file cert.pem podinfo.127.0.0.1.nip.io httpbin.127.0.0.1.nip.io            # wygeneruj klucz i certyfikat za pomocą 
+kubectl create secret tls ingress-tls --key key.pem --cert cert.pem                                         # utwórz secret
 
 skaffold version
