@@ -209,4 +209,8 @@ minikube addons disable ingress
 mkcert --key-file key.pem --cert-file cert.pem podinfo.127.0.0.1.nip.io httpbin.127.0.0.1.nip.io            # wygeneruj klucz i certyfikat za pomocą 
 kubectl create secret tls ingress-tls --key key.pem --cert cert.pem                                         # utwórz secret
 
+kubectl get sts                                                       # pobierz stateful set
+kubectl scale sts/app-staeful-set --replicas=5                        # zeskaluj stateful set
+dig app-stateful-set.default.svc.cluster.local                        # wpisy DNS dla headless service
+
 skaffold version
