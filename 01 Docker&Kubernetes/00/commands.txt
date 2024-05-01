@@ -206,6 +206,8 @@ kubectl get pvc                                                     # pobierz pe
 minikube addons enable ingress
 minikube addons disable ingress
 
+skaffold version
+
 mkcert --key-file key.pem --cert-file cert.pem podinfo.127.0.0.1.nip.io httpbin.127.0.0.1.nip.io            # wygeneruj klucz i certyfikat za pomocą 
 kubectl create secret tls ingress-tls --key key.pem --cert cert.pem                                         # utwórz secret
 
@@ -213,4 +215,8 @@ kubectl get sts                                                       # pobierz 
 kubectl scale sts/app-staeful-set --replicas=5                        # zeskaluj stateful set
 dig app-stateful-set.default.svc.cluster.local                        # wpisy DNS dla headless service
 
-skaffold version
+helm version
+helm list                                                             # listing zainstalowanych aplikacji (releases) 
+kubectl get all                                                       # pobranie wszystkich obiektów z aktualnego 
+helm template nginx-dev nginx                                         # template lokalnego charta (w folderze nginx)
+helm install nginx-dev nginx                                          # instalacja lokalnego charta (w folderze nginx) 
