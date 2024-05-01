@@ -200,6 +200,8 @@ kubectl scale deployment deployment/app-deployment --replicas 10    # skalowanie
 kubectl rollout pause deployment/app-deployment                     # wstrzymanie wdrożeń danego deploymentu
 kubectl rollout resume deployment/app-deployment                    # wznowienie wdrożeń danego deploymentu
 
+kubectl get pv                                                      # pobierz persistent volumes
+kubectl get pvc                                                     # pobierz persistent volume claims
 
 minikube addons enable ingress
 minikube addons disable ingress
