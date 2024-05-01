@@ -215,8 +215,11 @@ kubectl get sts                                                       # pobierz 
 kubectl scale sts/app-staeful-set --replicas=5                        # zeskaluj stateful set
 dig app-stateful-set.default.svc.cluster.local                        # wpisy DNS dla headless service
 
-helm version
+`helm version
 helm list                                                             # listing zainstalowanych aplikacji (releases) 
 kubectl get all                                                       # pobranie wszystkich obiektów z aktualnego 
 helm template nginx-dev nginx                                         # template lokalnego charta (w folderze nginx)
 helm install nginx-dev nginx                                          # instalacja lokalnego charta (w folderze nginx) 
+
+kubectl get job
+kubectl get cronjob
