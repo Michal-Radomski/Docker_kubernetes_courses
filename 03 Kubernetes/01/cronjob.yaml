@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: probability-cronjob
 spec:
-  schedule: "*/1 * * * *"
+  schedule: "*/1 * * * *" # Every one minute!
   concurrencyPolicy: Forbid
   jobTemplate:
     spec:

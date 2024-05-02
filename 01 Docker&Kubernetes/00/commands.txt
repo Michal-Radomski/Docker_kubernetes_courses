@@ -223,3 +223,6 @@ helm install nginx-dev nginx                                          # instalac
 
 kubectl get job
 kubectl get cronjob
+
+kubectl api-resources
+kubectl create token -h (help)
