@@ -206,6 +206,7 @@ kubectl get pvc                                                     # pobierz pe
 
 minikube addons enable ingress
 minikube addons disable ingress
+minikube addons enable metrics-server
 
 skaffold version
 
