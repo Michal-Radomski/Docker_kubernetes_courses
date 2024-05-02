@@ -136,6 +136,7 @@ minikube start — driver=docker
 minikube addons list
 `minikube dashboard
 minikube profile list
+`minikube node list
 
 kubectl version --client
 kubectl version -o yaml
