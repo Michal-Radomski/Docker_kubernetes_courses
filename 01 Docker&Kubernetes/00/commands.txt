@@ -226,3 +226,8 @@ kubectl get cronjob
 
 kubectl api-resources
 kubectl create token -h (help)
+
+kubectl get role                                                      # pobranie ról o zasięgu namespace
+kubectl get rolebindings                                              # pobranie role bindings (zasięg namespace)
+kubectl get clusterrole                                               # pobranie ról o zasięgu klastra
+kubectl get clusterrolebindings                                        # pobranie cluster role bindings (zasięg klastra)
