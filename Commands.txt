@@ -141,8 +141,8 @@ minikube profile list
 kubectl version --client
 kubectl version -o yaml
 `kubectl version
-kubectl cluster-info
-kubectl get nodes
+`kubectl cluster-info
+`kubectl get nodes
 `kubectl get svc
 
 kubectl run <my-first-nginx> --image=nginx
@@ -236,3 +236,7 @@ kubectl get clusterrolebindings                                       # pobranie
 
 
 `kubectl delete all --all -A                                          # https://www.baeldung.com/ops/kubernetes-delete-all-pods
+
+Install kubeadm (a tool similiar to minikube)
+sudo snap install kubeadm --classic
+kubeadm version
