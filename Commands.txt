@@ -179,6 +179,8 @@ kubectl describe <type eg pod> <name>
 kubectl set image <object type>/<object name> <container name=new full container name> 
 
 minikube docker-env
+eval $(minikube -p minikube docker-env)
+minikube image ls --format table
 
 kubectl logs <name>
 
