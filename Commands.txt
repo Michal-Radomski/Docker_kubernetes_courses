@@ -181,6 +181,8 @@ kubectl set image <object type>/<object name> <container name=new full container
 minikube docker-env
 eval $(minikube -p minikube docker-env)
 minikube image ls --format table
+kubectl scale deployment <name> --replicas=0 (stops pods)
+kubectl delete pod <name> / kubectl delete pod <name> --force
 
 kubectl logs <name>
 
