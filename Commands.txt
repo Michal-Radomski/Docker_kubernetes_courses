@@ -41,6 +41,10 @@ docker search ubuntu
 docker run busybox ls -l
 docker run busybox echo Hi there!
 
+`docker container exec mycontainer ls -l /tmp -> list of files in mycontainer: /tmp
+docker container exec -it mycontainer /bin/bash
+`docker cp mycontainer:/tmp/example.txt /. -> copying file example.txt from mycontainer:/tmp into user's current directory
+
 `docker start <container ID> !is used to start existing stopped containers that were previously created with docker run or a similar command!
 docker logs <container ID>
 `docker stop <container ID> / docker container stop <container ID> 
