@@ -31,7 +31,7 @@ docker logout
 docker search ubuntu
 `docker system df
 `docker images
-`docker image -a
+`docker images -a
 `docker ps -a (--all)
 `docker container ls -a
 `docker volume ls
