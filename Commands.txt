@@ -35,6 +35,7 @@ docker search ubuntu
 `docker ps -a (--all)
 `docker container ls -a
 `docker volume ls
+docker ps -a --filter "name=valhalla"
 
 
 `docker container run --publish 8080:80 nginx / docker run --publish 8080:80 nginx -> new/old command (8080 localhost, 80 nginx)
