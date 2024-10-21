@@ -62,6 +62,8 @@ docker push <dockerHubID/repoName> (push to DockerHub)
 `docker volume prune
 `docker system prune --volumes -a
 
+docker builder prune -a
+
 docker exec -it <container id> <command> (sh/bash) -> -it = -i -t
 
 `docker build .
