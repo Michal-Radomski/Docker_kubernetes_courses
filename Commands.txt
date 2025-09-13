@@ -37,6 +37,7 @@ docker search ubuntu
 `docker volume ls
 docker ps -a --filter "name=valhalla"
 
+~docker run = docker create + docker start (docker create hello-world + docker start -a <containerId>)
 
 `docker container run --publish 8080:80 nginx / docker run --publish 8080:80 nginx -> new/old command (8080 localhost, 80 nginx)
 docker run busybox ls -l
@@ -64,7 +65,8 @@ docker push <dockerHubID/repoName> (push to DockerHub)
 
 docker builder prune -a
 
-docker exec -it <container id> <command> (sh/bash) -> -it = -i -t
+docker exec -it <container id> <command> (sh/bash) -> -it = -i -t (provide an input to the container eg sh/bash command)
+ctrl+d or exit to break!
 
 `docker build .
 `docker build -f Dockerfile.dev .
